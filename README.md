@@ -48,13 +48,9 @@ cd now-playing-bot
 python -m venv .venv
 source .venv/bin/activate # Windows: .venv\Scripts\activate
 
-text
-
 ### 2. Install dependencies
 
 pip install -r requirements.txt
-
-text
 
 (или `pip freeze > requirements.txt`, если используешь другой менеджер пакетов.)
 
@@ -74,8 +70,6 @@ text
 
 http://127.0.0.1:8000/auth/callback
 
-text
-
 4. Copy **Client ID** and **Client Secret**.
 
 ### 5. Configure `.env`
@@ -83,8 +77,6 @@ text
 Create a local `.env` from the example:
 
 cp .env.example .env
-
-text
 
 Fill it with your values:
 
@@ -96,8 +88,6 @@ SPOTIFY_REDIRECT_URI=http://127.0.0.1:8000/auth/callback
 
 DATABASE_URL=sqlite+aiosqlite:///./data.db
 
-text
-
 ---
 
 ## Running locally
@@ -105,8 +95,6 @@ text
 ### 1. Start the backend (FastAPI)
 
 uvicorn app.main:app --reload
-
-text
 
 Healthcheck:
 
@@ -117,8 +105,6 @@ Healthcheck:
 In another terminal (with the same virtualenv):
 
 python -m bot.bot_main
-
-text
 
 ---
 
@@ -137,8 +123,6 @@ text
 
 @your_bot_username
 
-text
-
 5. Choose the inline result “Share Spotify now playing”.
 
 The bot will send a message like:
@@ -147,8 +131,6 @@ The bot will send a message like:
 Track Name by Artist
 Album: Album Name
 https://open.spotify.com/track/...
-
-text
 
 ---
 
@@ -170,8 +152,6 @@ bot_main.py # Telegram bot: /start, /status, /connect, inline handler
 .env.example # sample configuration
 requirements.txt
 README.md
-
-text
 
 ---
 
