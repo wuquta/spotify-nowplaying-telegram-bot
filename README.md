@@ -42,15 +42,21 @@ No chat history or track data is stored permanently — only the tokens needed t
 
 ### 1. Clone & create virtualenv
 
+```bash
 git clone https://github.com/wuquta/now-playing-bot.git
 cd now-playing-bot
+```
 
+```bash
 python -m venv .venv
 source .venv/bin/activate # Windows: .venv\Scripts\activate
+```
 
 ### 2. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
 ### 3. Create a Telegram bot
 
@@ -74,17 +80,19 @@ http://127.0.0.1:8000/auth/callback
 
 Create a local `.env` from the example:
 
+```bash
 cp .env.example .env
+```
 
 Fill it with your values:
 
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+- TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 
-SPOTIFY_CLIENT_ID=your_spotify_client_id
-SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
-SPOTIFY_REDIRECT_URI=http://127.0.0.1:8000/auth/callback
+- SPOTIFY_CLIENT_ID=your_spotify_client_id
+- SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+- SPOTIFY_REDIRECT_URI=http://127.0.0.1:8000/auth/callback
 
-DATABASE_URL=sqlite+aiosqlite:///./data.db
+- DATABASE_URL=sqlite+aiosqlite:///./data.db
 
 ---
 
@@ -92,7 +100,9 @@ DATABASE_URL=sqlite+aiosqlite:///./data.db
 
 ### 1. Start the backend (FastAPI)
 
+```bash
 uvicorn app.main:app --reload
+```
 
 Healthcheck:
 
@@ -102,7 +112,9 @@ Healthcheck:
 
 In another terminal (with the same virtualenv):
 
+```bash
 python -m bot.bot_main
+```
 
 ---
 
