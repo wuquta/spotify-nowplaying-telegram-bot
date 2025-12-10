@@ -42,7 +42,7 @@ No chat history or track data is stored permanently — only the tokens needed t
 
 ### 1. Clone & create virtualenv
 
-git clone https://github.com/YOUR_USERNAME/now-playing-bot.git
+git clone https://github.com/wuquta/now-playing-bot.git
 cd now-playing-bot
 
 python -m venv .venv
@@ -51,8 +51,6 @@ source .venv/bin/activate # Windows: .venv\Scripts\activate
 ### 2. Install dependencies
 
 pip install -r requirements.txt
-
-(или `pip freeze > requirements.txt`, если используешь другой менеджер пакетов.)
 
 ### 3. Create a Telegram bot
 
