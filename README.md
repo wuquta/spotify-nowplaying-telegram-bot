@@ -153,12 +153,10 @@ db.py # async SQLAlchemy engine/session
 models.py # User model (Telegram + Spotify tokens)
 spotify_client.py # OAuth and Spotify Web API helpers
 routers/
-auth.py # /auth/login, /auth/status, /auth/callback
-now_playing.py # /api/now-playing
-
+   auth.py # /auth/login, /auth/status, /auth/callback
+   now_playing.py # /api/now-playing
 bot/
-bot_main.py # Telegram bot: /start, /status, /connect, inline handler
-
+   bot_main.py # Telegram bot: /start, /status, /connect, inline handler
 .env.example # sample configuration
 requirements.txt
 README.md
